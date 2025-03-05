@@ -1,42 +1,99 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Upload, Sparkles, Download } from "lucide-react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Image Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .cta-button {
+            padding: 15px 25px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+        .feature-card h3 {
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Image Enhancer</h1>
+        <p>Enhance your images with cutting-edge AI technology.</p>
+    </header>
 
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6">
-      <motion.h1 
-        className="text-5xl font-bold text-center mb-6"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        AI Image Enhancer
-      </motion.h1>
-      <p className="text-lg text-gray-300 text-center max-w-2xl mb-8">
-        Enhance your images with cutting-edge AI technology. Improve quality, remove noise, and upscale effortlessly.
-      </p>
-      
-      <Card className="w-full max-w-2xl p-6 bg-gray-800 rounded-2xl shadow-lg">
-        <CardContent className="flex flex-col items-center">
-          <Button className="w-full mb-4 flex items-center gap-2" variant="secondary">
-            <Upload size={20} /> Upload Image
-          </Button>
-          <motion.div 
-            className="text-center my-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Sparkles size={32} className="text-yellow-400" />
-          </motion.div>
-          <Button className="w-full flex items-center gap-2 bg-green-500 hover:bg-green-600">
-            <Download size={20} /> Download Enhanced Image
-          </Button>
-          <a href="#" className="mt-4 text-blue-400 hover:underline">Learn More</a>
-        </CardContent>
-      </Card>
+    <div class="container">
+        <a href="https://www.example.com/get-started" class="cta-button">Get Started</a>
+        
+        <div class="features">
+            <a href="https://www.example.com/quality-enhancement" class="feature-card">
+                <h3>Image Quality</h3>
+                <p>Improve image resolution and clarity.</p>
+            </a>
+            <a href="https://www.example.com/noise-reduction" class="feature-card">
+                <h3>Noise Reduction</h3>
+                <p>Remove noise for smoother visuals.</p>
+            </a>
+            <a href="https://www.example.com/color-enhancement" class="feature-card">
+                <h3>Color Enhancement</h3>
+                <p>Bring out the true colors of your images.</p>
+            </a>
+        </div>
     </div>
-  );
-}
+
+    <footer>
+        <p>&copy; 2025 AI Image Enhancer. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
